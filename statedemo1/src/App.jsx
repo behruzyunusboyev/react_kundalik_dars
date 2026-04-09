@@ -1,7 +1,8 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import {useEffect} from 'react'
 import './App.css'
 import QuoteCard from './pages/QuoteCard'
+// import AddQuote from './pages/AddQuote'
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
     }
     setLoading(false);
   }
-    
+
   useEffect(() => {
     getQuote();
   }, []);
@@ -49,6 +50,7 @@ function App() {
     <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}}
       id='app'
     >
+      {/* <AddQuote /> */}
         <h1>kun hikmati</h1>
         {loading && <p>Loading...</p>}
         {error && <p style={{color:"red"}}>{error}</p>}
@@ -57,7 +59,8 @@ function App() {
             QuoteCard({ quote: quote.content, author: quote.author })
 
           )}
-        
+        {/* <input type="text" placeholder="Hikmat" value={quote} onChange={(e) => setQuote(e.target.value)} /> */}
+        {/* <input type="text" placeholder="Muallif" value={author} onChange={(e) => setAuthor(e.target.value)} /> */}
     </div>
         <button onClick={getQuote} style={{
           background:"black",
