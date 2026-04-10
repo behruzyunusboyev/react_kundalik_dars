@@ -22,13 +22,14 @@ function App() {
         content: data.quote,
         author: data.author
       });
-      
+
     }catch(err){
       setError("Failed to fetch quote. Please try again.");
       console.error(err);
     }
     setLoading(false);
   }
+
 
   useEffect(() => {
     getQuote();
@@ -43,24 +44,47 @@ function App() {
   };
   },[quote]);
 
+  // const [hikmat, setHikmat] = useState("");
+  //   const [author, setAuthor] = useState("");
+  //   let hikmatlar =[]
+  //   let muallif =[]
 
+
+  //       const qoshish = () =>{
+  //       hikmatlar.push(hikmat)
+  //       muallif.push(author)
+  //       console.log(hikmatlar);
+  //       console.log(muallif);
+  //   }
+  //   const clear = () =>{
+  //       setHikmat("");
+  //       setAuthor("");
+  //   }
+
+  // const  createQ = () =>{
+  //       setQuote({
+  //         content: hikmatlar,
+  //         author: author
+  //       })
+  //   }
   
   return (
     <div>
-    <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}}
-      id='app'
-    >
-      {/* <AddQuote /> */}
+      {/* <div>
+            <input type="text" placeholder="Hikmat" value={hikmat} onChange={(e) => setHikmat(e.target.value)} />
+            <input type="text" placeholder="Muallif" value={author} onChange={(e) => setAuthor(e.target.value)} />
+            <button onClick={qoshish}>Qo'shish</button>
+            <button onClick={clear}>clear</button>
+      </div> */}
+
+    <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}} id='app' >
         <h1>kun hikmati</h1>
         {loading && <p>Loading...</p>}
         {error && <p style={{color:"red"}}>{error}</p>}
         {!loading && !error && quote && (
 
-            QuoteCard({ quote: quote.content, author: quote.author })
-
-          )}
-        {/* <input type="text" placeholder="Hikmat" value={quote} onChange={(e) => setQuote(e.target.value)} /> */}
-        {/* <input type="text" placeholder="Muallif" value={author} onChange={(e) => setAuthor(e.target.value)} /> */}
+            QuoteCard({ quote: quote.content, author: quote.author })  
+      )}
     </div>
         <button onClick={getQuote} style={{
           background:"black",
@@ -71,6 +95,18 @@ function App() {
           fontSize:"15px",
           fontWeight:"bold"
         }}>Yangi hikmat</button>
+
+        {/* <button 
+        onClick={createQ}  
+        style={{
+          background:"black",
+          color:"white",
+          width:"120px",
+          height:"60px",
+          borderRadius:"30px",
+          fontSize:"15px",
+          fontWeight:"bold"
+        }}>Hikmat yaratish</button> */}
     </div>
   )
 }
