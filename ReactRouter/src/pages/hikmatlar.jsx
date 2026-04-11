@@ -4,7 +4,7 @@ import './App.css'
 import QuoteCard from './pages/QuoteCard'
 // import AddQuote from './pages/AddQuote'
 
-function App() {
+function Hikmatlar() {
 
   const [quote, setQuote] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -111,4 +111,4 @@ function App() {
   )
 }
 
-export default App
+export default Hikmatlar
