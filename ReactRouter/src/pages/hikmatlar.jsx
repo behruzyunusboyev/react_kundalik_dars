@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import {useEffect} from 'react'
-import './App.css'
-import QuoteCard from './pages/QuoteCard'
-// import AddQuote from './pages/AddQuote'
-
+import QuoteCard from './QuoteCard';
+import "../pages/styles/hikmatlar.css"
 function Hikmatlar() {
 
   const [quote, setQuote] = useState(null);
@@ -11,6 +9,8 @@ function Hikmatlar() {
   const [error, setError] = useState(null);
 
   const getQuote = async () =>{
+
+    yasash.style.display = "none"
     setLoading(true);
     setError(null);
     try{
@@ -35,14 +35,14 @@ function Hikmatlar() {
     getQuote();
   }, []);
 
-  useEffect(() => {
-    if (quote) {
-    const ranglar = ["#3498DB", "#2ECC71", "#9B59B6", "#E67E22", "#E74C3C", "#F1C40F", "#34495E", "#FD79A8"];
-    const randomColor = ranglar[Math.floor(Math.random() * ranglar.length)];
-    document.body.style.backgroundColor = randomColor;
-    document.body.style.transition = "background-color 1s ease";
-  };
-  },[quote]);
+  // useEffect(() => {
+  //   if (quote) {
+  //   const ranglar = ["#3498DB", "#2ECC71", "#9B59B6", "#E67E22", "#E74C3C", "#F1C40F", "#34495E", "#FD79A8"];
+  //   const randomColor = ranglar[Math.floor(Math.random() * ranglar.length)];
+  //   document.body.style.backgroundColor = randomColor;
+  //   document.body.style.transition = "background-color 1s ease";
+  // };
+  // },[quote]);
 
     const [hikmat, setHikmat] = useState("");
     const [author, setAuthor] = useState("");
@@ -60,8 +60,9 @@ function Hikmatlar() {
         setHikmat("");
         setAuthor("");
     }
-
+    const yasash = document.getElementById("yasash")
   const  createQ = () =>{
+    yasash.style.display = "block"
         setQuote({
           content: hikmatlar,
           author: author
@@ -69,12 +70,16 @@ function Hikmatlar() {
     }
   
   return (
-    <div>
-      <div>
+    <div id='hikmat_main_div'>
+      <div id='yasash'>
+            <div className="hik_inp">
             <input type="text" placeholder="Hikmat" value={hikmat} onChange={(e) => setHikmat(e.target.value)} />
             <input type="text" placeholder="Muallif" value={author} onChange={(e) => setAuthor(e.target.value)} />
+            </div>
+            <div className="hik_btn">
             <button onClick={qoshish}>Qo'shish</button>
             <button onClick={clear}>clear</button>
+            </div>
       </div>
 
     <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}} id='app' >
@@ -85,8 +90,9 @@ function Hikmatlar() {
 
             QuoteCard({ quote: quote.content, author: quote.author })  
       )}
-    </div>
-        <button onClick={getQuote} style={{
+    </div >
+        <div id="hik_btns">
+          <button onClick={getQuote} style={{
           background:"black",
           color:"white",
           width:"120px",
@@ -107,6 +113,7 @@ function Hikmatlar() {
           fontSize:"15px",
           fontWeight:"bold"
         }}>Hikmat yaratish</button>
+        </div>
     </div>
   )
 }

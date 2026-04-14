@@ -1,0 +1,33 @@
+.homepage{
+    width: 1000px;
+    height: 500px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rasm1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.matn{
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: blue; */
+    justify-self: center;
+    align-items: center;
+}
+.matn h1{
+    font-size: 35px;
+    /* color: white; */
+    margin-left: -20px;
+}
+.matn p{
+    font-size: 20px;
+    /* color: white; */
+    text-align: center;
+}

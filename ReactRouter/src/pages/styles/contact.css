@@ -1,0 +1,24 @@
+.cuntact_div{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgb(182, 176, 176);
+    border-radius:15px;
+}
+.cuntact_div .yollar img{
+    width: 100px;
+    /* height: 100px; */
+}
+.yollar{
+    width: 500px;
+    background-color: rgb(241, 241, 243);
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
