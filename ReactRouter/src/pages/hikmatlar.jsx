@@ -8,9 +8,11 @@ function Hikmatlar() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [showform, setshowform] = useState(false)
+    
+
   const getQuote = async () =>{
 
-    yasash.style.display = "none"
     setLoading(true);
     setError(null);
     try{
@@ -28,21 +30,12 @@ function Hikmatlar() {
       console.error(err);
     }
     setLoading(false);
+    setshowform(false)
   }
-
 
   useEffect(() => {
     getQuote();
   }, []);
-
-  // useEffect(() => {
-  //   if (quote) {
-  //   const ranglar = ["#3498DB", "#2ECC71", "#9B59B6", "#E67E22", "#E74C3C", "#F1C40F", "#34495E", "#FD79A8"];
-  //   const randomColor = ranglar[Math.floor(Math.random() * ranglar.length)];
-  //   document.body.style.backgroundColor = randomColor;
-  //   document.body.style.transition = "background-color 1s ease";
-  // };
-  // },[quote]);
 
     const [hikmat, setHikmat] = useState("");
     const [author, setAuthor] = useState("");
@@ -60,18 +53,19 @@ function Hikmatlar() {
         setHikmat("");
         setAuthor("");
     }
-    const yasash = document.getElementById("yasash")
+    
   const  createQ = () =>{
-    yasash.style.display = "block"
-        setQuote({
-          content: hikmatlar,
-          author: author
-        })
+        // setQuote({
+        //   content: hikmatlar,
+        //   author: author
+        // })
+         setshowform(true)
     }
   
   return (
     <div id='hikmat_main_div'>
-      <div id='yasash'>
+      {showform && (
+        <div id='yasash'>
             <div className="hik_inp">
             <input type="text" placeholder="Hikmat" value={hikmat} onChange={(e) => setHikmat(e.target.value)} />
             <input type="text" placeholder="Muallif" value={author} onChange={(e) => setAuthor(e.target.value)} />
@@ -81,6 +75,7 @@ function Hikmatlar() {
             <button onClick={clear}>clear</button>
             </div>
       </div>
+    )}
 
     <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}} id='app' >
         <h1>kun hikmati</h1>
@@ -119,3 +114,13 @@ function Hikmatlar() {
 }
 
 export default Hikmatlar
+
+
+  // useEffect(() => {
+  //   if (quote) {
+  //   const ranglar = ["#3498DB", "#2ECC71", "#9B59B6", "#E67E22", "#E74C3C", "#F1C40F", "#34495E", "#FD79A8"];
+  //   const randomColor = ranglar[Math.floor(Math.random() * ranglar.length)];
+  //   document.body.style.backgroundColor = randomColor;
+  //   document.body.style.transition = "background-color 1s ease";
+  // };
+  // },[quote]);

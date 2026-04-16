@@ -14,7 +14,7 @@ function Cuntact(){
             <div className="yollar">
                 <img src={email_icon} alt="email_icon" />
                 <h1>Email:</h1>
-                <p>behruzyunusboyev9@gmail.com</p>
+                <p id="emailp">behruzyunusboyev9@gmail.com</p>
             </div>
             <div className="yollar">
                 <img src= {tg_icon} alt="" />

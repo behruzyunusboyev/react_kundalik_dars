@@ -9,16 +9,30 @@
     background-color: rgb(182, 176, 176);
     border-radius:15px;
 }
+.cuntact_div h1{
+    font-size: 25px;
+
+}
 .cuntact_div .yollar img{
     width: 100px;
+    border-radius: 50%;
     /* height: 100px; */
 }
 .yollar{
     width: 500px;
+    height: 100px;
     background-color: rgb(241, 241, 243);
     align-items: center;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
+}
+.yollar p{
+    font-size: 20px;
+}
+.emailp{
+    position: relative;
+    background-color: red;
+    width: 260px;
 }
