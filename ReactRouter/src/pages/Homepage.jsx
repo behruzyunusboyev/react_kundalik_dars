@@ -7,10 +7,11 @@ function Homepage() {
             <div className="homepage">
                 <img src={rasm1} alt="Rasm" className='rasm1' />
             <div className="matn">
-            <h1>Men Behruz Yunusboyev</h1>
-            <p>Yoshim 16 da va hozirda Yangibozor tumanida Alxorazmiy loyhasida o'qiman
-            Men 1 yarm yildan beri IT sohasini organib kelaman.
+            <div className="matn2">
+                <h1 id='h11'>Salom, Behruz Yunusboyev</h1>
+            <p id='kasb'>Men frontend dasturchiman
             </p>
+            </div>
             <h1 className='malum'>Malumotlarim :</h1>
             <div className="home_items">
                 <div className="home_item">

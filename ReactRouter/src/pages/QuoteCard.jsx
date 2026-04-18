@@ -18,7 +18,7 @@ function QuoteCard({ quote, author }) {
       <p style={{fontSize:"20px", fontStyle:"italic"}}>{quote}</p>
       <p style={{textAlign:"right", color:"#333"}}>— {author}</p>
 
-      <button style={{ background:"blue", color:"white", width:"100px", height:"40px", borderRadius:"30px", fontSize:"15px", fontWeight:"bold"}} 
+      <button style={{ background:"#191818", color:"white", width:"100px", height:"40px", borderRadius:"30px", fontSize:"15px", fontWeight:"bold"}} 
         onClick={nusxalash}>
           nushalash</button>
     </div>

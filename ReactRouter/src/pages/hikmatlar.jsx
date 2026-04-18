@@ -78,7 +78,7 @@ function Hikmatlar() {
     )}
 
     <div style={{maxWidth:"600px", margin:"50px auto", textAlign:"center"}} id='app' >
-        <h1>kun hikmati</h1>
+        <h1 id='hik_h1'>kun hikmati</h1>
         {loading && <p>Loading...</p>}
         {error && <p style={{color:"red"}}>{error}</p>}
         {!loading && !error && quote && (
