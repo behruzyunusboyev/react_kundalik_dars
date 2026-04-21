@@ -97,7 +97,7 @@ function Hikmatlar() {
           fontWeight:"bold"
         }}>Yangi hikmat</button>
 
-        <button 
+        {/* <button 
         onClick={createQ}  
         style={{
           background:"black",
@@ -107,7 +107,7 @@ function Hikmatlar() {
           borderRadius:"30px",
           fontSize:"15px",
           fontWeight:"bold"
-        }}>Hikmat yaratish</button>
+        }}>Hikmat yaratish</button> */}
         </div>
     </div>
   )
