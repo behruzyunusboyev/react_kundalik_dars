@@ -1,6 +1,6 @@
 import '../pages/styles/homrpage.css'
-import rasm1 from '../pages/homepage_img.jpg'
-import rasm2 from "../pages/ptichka.jpg.png"
+import rasm1 from '../pages/rasmlar/homepage_img.jpg'
+import rasm2 from "../pages/rasmlar/ptichka.jpg.png"
 function Homepage() {
     return(
         <div className='homepage1'>
@@ -9,8 +9,7 @@ function Homepage() {
             <div className="matn">
             <div className="matn2">
                 <h1 id='h11'>Salom, Behruz Yunusboyev</h1>
-            <p id='kasb'>Men frontend dasturchiman
-            </p>
+            <p id='kasb'>Men frontend dasturchiman</p>
             </div>
             <h1 className='malum'>Malumotlarim :</h1>
             <div className="home_items">

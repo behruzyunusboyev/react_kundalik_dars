@@ -1,0 +1,77 @@
+.main_projects{
+    margin-top: 70px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    gap: 20px;
+    background-color: red;
+    height: 700px;
+    /* align-items: center; */
+    /* justify-content: center;\ */
+    justify-items: center;
+}
+.element3{
+    grid-column: 1 / -1;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+/* liveInput start */
+.live_div{
+    width : 1000px;
+    border: 1px solid black;
+    border-radius:10px ;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0px ;
+    height:200px;
+    background-color: black;
+  box-shadow: 10px 10px 25px rgba(0, 255, 255, 0.5);
+
+}
+.live_h1{
+    font-size: 30px;
+    /* background-color: blue; */
+    height: 5px;
+}
+.live_inp{
+    width: 200px;
+    height: 30px;
+}
+.live_matn{
+    font-size: 25px;
+    height: 5px;
+    /* background-color: blue; */
+}
+/* clock start */
+.clock_div{
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    border-radius: 15px;
+    width: 400px;
+    /* display: inline-block; */
+}
+.clock_btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+    box-shadow: 5px 5px 15px rgba(0, 255, 255, 0.5);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+/* counter start */
+#divv{
+    background-color: blue;
+}
+#h22{
+    font-size: 30px;
+}
