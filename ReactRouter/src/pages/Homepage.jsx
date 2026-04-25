@@ -1,6 +1,7 @@
 import '../pages/styles/homrpage.css'
 import rasm1 from '../pages/rasmlar/homepage_img.jpg'
 import rasm2 from "../pages/rasmlar/ptichka.jpg.png"
+import { FaUser, FaMapMarkerAlt, FaBriefcase, FaProjectDiagram } from "react-icons/fa";
 function Homepage() {
     return(
         <div className='homepage1'>
@@ -14,22 +15,26 @@ function Homepage() {
             <h1 className='malum'>Malumotlarim :</h1>
             <div className="home_items">
                 <div className="home_item">
-                <img src={rasm2} alt="" className='rasm2' />
+                {/* <img src={rasm2} alt="" className='rasm2' /> */}
+                <FaUser size='30' color='white' />
                 <h1>Yoshim :</h1>
                 <p>16 da</p>
             </div>
             <div className="home_item">
-                <img src={rasm2} alt="" className='rasm2' />
+                <FaMapMarkerAlt size='30' color='white'/>
+                {/* <img src={rasm2} alt="" className='rasm2' /> */}
                 <h1>Manzil :</h1>
                 <p>O'zbekisto, Xorazm</p>
             </div>
             <div className="home_item">
-                <img src={rasm2} alt="" className='rasm2' />
+                <FaBriefcase size='30' color='white'/>
+                {/* <img src={rasm2} alt="" className='rasm2' /> */}
                 <h1>Tajriba :</h1>
                 <p>1.5 yil frontend devlopment</p>
             </div>
             <div className="home_item">
-                <img src={rasm2} alt="" className='rasm2' />
+                <FaProjectDiagram size='30' color='white'/>
+                {/* <img src={rasm2} alt="" className='rasm2' /> */}
                 <h1>loyhalar :</h1>
                 <p>Bir necha kichik loyhalar ishlagan man</p>
             </div>

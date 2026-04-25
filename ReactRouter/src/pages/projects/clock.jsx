@@ -41,7 +41,7 @@ function rcolor(){
 }
     
     return(
-        <div id="cant" className="clock_div">
+        <div id="cant" className="clock_div project">
             <h1 id="matn">Hozirgi vaqt</h1>
             <h2 id="soat" style={{fontSize:"58px", color:"#61dafb", fontWeight:"700"}}>{vaqt}</h2>
             <h2 id="kun"  style={{fontSize:"58px", color:"#61dafb", fontWeight:"700"}}>{kun}</h2>

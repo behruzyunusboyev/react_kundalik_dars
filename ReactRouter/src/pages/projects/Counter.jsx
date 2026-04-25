@@ -24,16 +24,20 @@ function Counter() {
         drson(daraja - 1);
     }
     return(
-        <div id="divv" style={{border:"1px solid black", width:"400px",  display:"flex", flexDirection:"column", 
-        alignItems:"center", justifyContent:"center" , borderRadius:"10px" ,}}>
+        <div id="divv" className="project">
             <h4 className="error1"></h4>
-            <h2 style={{ color:"black", marginBottom:"30px"}} id="h22">hozirgi sanoq : {son}<sup>{daraja}</sup>={Math.pow(son, daraja)}</h2>
-            <div className="btndiv" style={{ display:"flex" , width:"100%", height:"50px", alignItems:"center",justifyContent:"space-around"}}>
-            <button onClick={oshirish}          style={{borderRadius:"10px", border:"none", width:"80px", height:"20px"}}>Oshirish</button>
-            <button onClick={kamaytrish}        style={{borderRadius:"10px", border:"none", width:"80px", height:"20px"}}>kamaytrish</button>
-            <button onClick={() => {setSon(0)}} style={{borderRadius:"10px", border:"none", width:"80px", height:"20px"}}>nollash</button>
-            <button onClick={dr1}     >daraja(+)</button>
-            <button onClick={daraja2} >daraja(-)</button>
+            <h2 id="h22">hozirgi sanoq : {son}<sup>{daraja}</sup>={Math.pow(son, daraja)}</h2>
+            <div className="btndiv" >
+            <div className="btn12">
+            <button onClick={oshirish}          className="btns" >Oshirish</button>
+            <button onClick={kamaytrish}        className="btns" >kamaytrish</button>
+            </div>  
+            <div className="btn12">
+            <button onClick={dr1}               className="btns" >daraja(+)</button>
+            <button onClick={daraja2}           className="btns" >daraja(-)</button>
+            </div>
+            <button onClick={() => {setSon(0)}} className="btns" >nollash</button>
+
             </div>
         </div>
     )

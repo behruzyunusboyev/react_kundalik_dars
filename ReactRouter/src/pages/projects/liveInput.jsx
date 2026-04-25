@@ -3,7 +3,7 @@ import '../styles/projectlar.css'
 function LiveInput(){
     const [matn, setMatn] = useState("");
     return(
-        <div style={{ }} className="live_div" >
+        <div style={{ }} className="live_div project" >
             <h3 className="live_h1">jonli matn yozish</h3>
             <input 
                 type="text" 
